@@ -43,14 +43,6 @@
 
     main { width: 100%; max-width: 560px; position: relative; padding: 40px 0; }
 
-    /* Registration marks at the corners */
-    .mark { position: absolute; width: 14px; height: 14px; }
-    .mark::before, .mark::after { content: ""; position: absolute; background: var(--faint); }
-    .mark::before { width: 14px; height: 1px; top: 6.5px; left: 0; }
-    .mark::after  { width: 1px; height: 14px; left: 6.5px; top: 0; }
-    .tl { top: 0; left: -20px; } .tr { top: 0; right: -20px; }
-    .bl { bottom: 0; left: -20px; } .br { bottom: 0; right: -20px; }
-    @media (max-width: 640px) { .mark { display: none; } }
 
     h1 {
       font-size: clamp(2.4rem, 8vw, 3.6rem);
@@ -112,7 +104,6 @@
 </head>
 <body>
   <main>
-    <i class="mark tl"></i><i class="mark tr"></i><i class="mark bl"></i><i class="mark br"></i>
 
     <h1><span>Panit</span><span class="last">Potisomporn</span></h1>
 
