@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panit Potisomporn</title>
+  <meta name="description" content="Panit Potisomporn — links.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0b0d10;
+      --muted: #6b7280;
+      --faint: #a1a7b0;
+      --line: #0b0d10;
+      --hair: #e5e7eb;
+      --accent: #2148c0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0d10;
+        --text: #eef0f3;
+        --muted: #8a919c;
+        --faint: #4b525c;
+        --line: #eef0f3;
+        --hair: #1f242b;
+        --accent: #7c9cff;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter Tight", system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 64px 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main { width: 100%; max-width: 560px; position: relative; padding: 40px 0; }
+
+    /* Registration marks at the corners */
+    .mark { position: absolute; width: 14px; height: 14px; }
+    .mark::before, .mark::after { content: ""; position: absolute; background: var(--faint); }
+    .mark::before { width: 14px; height: 1px; top: 6.5px; left: 0; }
+    .mark::after  { width: 1px; height: 14px; left: 6.5px; top: 0; }
+    .tl { top: 0; left: -20px; } .tr { top: 0; right: -20px; }
+    .bl { bottom: 0; left: -20px; } .br { bottom: 0; right: -20px; }
+    @media (max-width: 640px) { .mark { display: none; } }
+
+    h1 {
+      font-size: clamp(2.4rem, 8vw, 3.6rem);
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      line-height: 0.95;
+    }
+    h1 span { display: block; }
+    h1 .last { color: var(--muted); font-weight: 500; }
+
+    ul { list-style: none; margin-top: 48px; border-top: 1.5px solid var(--line); }
+    li { border-bottom: 1px solid var(--hair); }
+    a {
+      display: grid;
+      grid-template-columns: 36px 1fr auto 18px;
+      align-items: baseline;
+      gap: 12px;
+      padding: 18px 0;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 500;
+      position: relative;
+    }
+    a::after {
+      content: "";
+      position: absolute; left: 0; bottom: -1px;
+      height: 1px; width: 0;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+    a:hover::after { width: 100%; }
+    .num, .handle {
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 0.75rem;
+      font-weight: 400;
+    }
+    .num { color: var(--faint); }
+    .handle { color: var(--muted); text-align: right; overflow-wrap: anywhere; }
+    .arrow { color: var(--faint); font-size: 0.9rem; transition: transform 0.2s ease, color 0.2s ease; }
+    a:hover .arrow { color: var(--accent); transform: translate(2px, -2px); }
+    a:hover .handle { color: var(--text); }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 28px;
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 0.7rem;
+      color: var(--faint);
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 480px) {
+      a { grid-template-columns: 28px 1fr 14px; }
+      .handle { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <i class="mark tl"></i><i class="mark tr"></i><i class="mark bl"></i><i class="mark br"></i>
+
+    <h1><span>Panit</span><span class="last">Potisomporn</span></h1>
+
+    <ul>
+      <li>
+        <a href="mailto:panit.potisomporn@gmail.com">
+          <span class="num">01</span>
+          <span>Email</span>
+          <span class="handle">panit.potisomporn@gmail.com</span>
+          <span class="arrow">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/panitpotisomporn/" target="_blank" rel="noopener">
+          <span class="num">02</span>
+          <span>LinkedIn</span>
+          <span class="handle">/in/panitpotisomporn</span>
+          <span class="arrow">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://scholar.google.com/citations?user=pY3ufhUAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+          <span class="num">03</span>
+          <span>Google Scholar</span>
+          <span class="handle">Publications</span>
+          <span class="arrow">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/panitpoti/" target="_blank" rel="noopener">
+          <span class="num">04</span>
+          <span>Instagram</span>
+          <span class="handle">@panitpoti</span>
+          <span class="arrow">↗</span>
+        </a>
+      </li>
+    </ul>
+
+    <footer>
+      <span>© 2026</span>
+    </footer>
+  </main>
+</body>
+</html>
